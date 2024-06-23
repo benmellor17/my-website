@@ -7,9 +7,15 @@
 
     --mainText: #616269;
     --secondaryText: #black;
+
     --themeDotBorder: #24292e;
 
     --previewBackground:#0f1e74;
+    --previewShadow: #008cff;
+
+    --buttonColour:black;
+    --s2Colour: #fff;
+    --anchorColour: #008cff;
 }
  
 /*GOOD WEBSITE FOR CSS Knowledge: https://css-tricks.com */
@@ -17,6 +23,10 @@
 html, body{
     padding: 0;
     margin: 0;
+}
+
+body *{
+    transition: 0.3s;
 }
 
 @font-face {
@@ -51,12 +61,12 @@ h1, h2, h3, h4, h5, h6{
 
 p, li, span, label, textarea{ 
     color: var(--mainText);
-    font-family: "Mundial", sans-serif;
+    font-family: monospace;
     font-weight: 550;
 }
 a{
-    text-decoration: none; /*removes underline from Links */
-    color: #008cff;
+    text-decoration: underline; /*removes underline from Links */
+    color: var(--anchorColour);
     font-family: monospace;
 }
 
@@ -71,8 +81,9 @@ p{
 
 li {
     font-family: monospace;
-    color: rgb(139, 139, 139);
+    color: var(--anchorColour);
 }
+
 
 h1 { font-size: 56px;}
 h2 { font-size: 36px;}
@@ -89,15 +100,23 @@ h6 { font-size: 16px;}
 }
 
 .s2{
-    background-color: var(--SecondaryText);
+    background-color: var(--s2Colour);
     border-bottom: 2px solid var(--borderColour);
     overflow: auto;
+
 }
 
 .s3{
     background-color: var(--SecondaryColour);
+    border-bottom: 2px solid var(--SecondaryColour);
+    overflow: auto;
 }
 
+.s4{    
+    background-color: var(--mainColour);
+    border-top: 2px solid black;
+    overflow: auto;
+}
 .main-container{
     width: 1200px;
     margin: 0 auto;
@@ -140,8 +159,24 @@ h6 { font-size: 16px;}
 }
 
 #navigation{
+    display: flex;
+    justify-content: flex-end;
     margin: 0;
     padding: 10px;
+
+
+}
+
+#navigation a{
+    color: var(--anchorColour);
+}
+
+.contact-class{
+    text-decoration: none;
+    padding: 5px;
+}
+.contact-class a{
+    color: var(--mainText);
 }
 
 #navigation li{
@@ -280,7 +315,7 @@ h6 { font-size: 16px;}
 
 
 #light-theme{
-    background-color: white;
+    background-color: rgb(184, 184, 184)
 }
 
 #green-theme{
@@ -304,8 +339,6 @@ h6 { font-size: 16px;}
     display: grid;
     align-content: center;
 
-    padding-top: 50px;
-    padding-bottom: 50px;
 }
 
 /*#about-shadow{
@@ -321,13 +354,18 @@ h6 { font-size: 16px;}
     border: 1.5px solid #616269;
     background-color: #008cff;
     background-color: var(--previewBackground);
-    padding: 15px;
+    padding: 20px;
     position: relative;
-
-    -webkit-box-shadow: -36px -23px 12px 8px #008cff;
-    -moz-box-shadow: -36px -23px 12px 8px #008cff;
-    box-shadow: -36px -23px 12px 8px #008cff;
+    margin-top: 100px;
     
+    -webkit-box-shadow: -36px -23px 12px 8px var(--previewShadow);
+    -moz-box-shadow: -36px -23px 12px 8px var(--previewShadow);
+    box-shadow: -36px -23px 12px 8px var(--previewShadow);
+    
+}
+
+.about-para{
+    color: var(--anchorColour);
 }
 
 .corner{
@@ -335,7 +373,7 @@ h6 { font-size: 16px;}
     height:  7px;
     border-radius: 50%;
     border: 1.5px solid var(--previewBackground);
-    background-color:#008cff;
+    background-color:var(--themeDotBorder);
     position: absolute;
 }
 
@@ -397,6 +435,7 @@ h6 { font-size: 16px;}
     grid-template-columns: repeat(auto-fit, 320px);
     gap: 20px;
     justify-content: center;
+    padding-bottom: 50px;
 }
 
 .post{
@@ -420,7 +459,7 @@ h6 { font-size: 16px;}
 .post-intro{
      color:rgb(2, 17, 58);
      font-family: monospace;
-     font-size: 15px;
+     font-size: 13px;
 }
 
 .thumbnail{
@@ -430,6 +469,45 @@ h6 { font-size: 16px;}
     object-fit: cover;
 }
 
+#contact-form{
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid var(--borderColour);
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--SecondaryColour);
+    margin-bottom: 50px;
+}
+
+#contact-form label{
+    line-height: 2.7em
+}
+
+#contact-form textarea{
+    min-height: 100px;
+    font-size: 14px;
+}
+
+
+.input-field{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--s2Colour);
+    border-radius: 5px;
+    border: 1px solid var(--borderColour);
+    font-size: 14px;
+}
+#submit-btn{
+    margin-top: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    background-color: var(--buttonColour);
+    border: none;
+}
 
 @media screen and (max-width: 1200px) {
     .main-container{
@@ -447,8 +525,15 @@ h6 { font-size: 16px;}
             'grid-left-wrapper'
             'grid-right-wrapper'
             ;
-        
     }   
+    #about-box{
+        margin-left: 10px;
+
+        -webkit-box-shadow: 0px var(--previewShadow);
+        -moz-box-shadow: 0px var(--previewShadow);
+        box-shadow: 0px var(--previewShadow);
+    }
+    .
      
 
   .right-column{

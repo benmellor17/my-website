@@ -13,6 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
     
     <link rel="stylesheet" type="text/css" href="default.css">
+    <link id="theme-style" rel="stylesheet" type="text/css" href="">
+
 </head>
 <body>
 
@@ -21,23 +23,24 @@
             <div class="title-wrapper">
                 <h2>Hi, I'm Ben Mellor</h2>
             </div>
-        
-        
-            <div class="intro-wrapper">
+
+            
+            <div class="intro-wrapper" id="intro">
                 <div class="navigation-wrapper">
-                    <div class="dots-wrapper">
-                    <div id ='dot-1'class="browser-dot">
-                        <div class="browser-cross"></div>
-                    </div>
-                    <div class="browser-dot">
-                        <div class="browser-square"></div>
-                    </div>
-                    <div class="browser-circ"></div>
-                    </div>
+                        <div class="dots-wrapper">
+                            <div id ='dot-1'class="browser-dot">
+                                    <div class="browser-cross"></div>
+                            </div>
+                            <div class="browser-dot">
+                                <div class="browser-square"></div>
+                            </div>
+                            <div class="browser-circ"></div>
+                        </div>
 
                     <ul id="navigation">
-                        <li><a href="#">Contact Me</a></li>
-                        <li><a href="#">Ur a wizard Harry</a></li>
+                        <li><a class="contact-class" href="#contact-form">Contact</a></li>
+                        <li><a class="contact-class" href="#about">About</a></li>
+                        <li><a class="contact-class" href="#projects">Projects</a></li>
                     
                     </ul>
                 </div>
@@ -48,28 +51,35 @@
                     <h5 style="text-align: center;line-height: 0;"> Personalise your Theme</h5>
 
                     <div id="theme-options">
-                        <div id="light-theme" class="theme-dot"></div>
-                        <div id="blue-theme" class="theme-dot"></div>
-                        <div id="green-theme" class="theme-dot"></div>
-                        <div id="purple-theme" class="theme-dot"></div>  
+                        <div data-mode="light" id="light-theme" class="theme-dot"></div>
+                        <div data-mode="blue" id="blue-theme" class="theme-dot"></div>
+                        <div data-mode="green" id="green-theme" class="theme-dot"></div>
+                        <div data-mode="purple" id="purple-theme" class="theme-dot"></div>  
                     </div>
-
                     <p id="settings-note"> These settings will be saved for your next vist :)</p>
                 </div>
 
-                    <div class="right-column">
-                        <div id="about-shadow">
-                            <div id="about-box">
-                                <div id="corner-tl" class="corner" ></div>
-                                <div id="corner-tr" class="corner" ></div>
-                                <h3 id="about-comm"> A bit about me</h3>
-                                <p id="about-para">I'm currently working as an IT DMS Apprentice in the Software Development Team at Fieldfisher LLP, a multinational European Law Firm. </p>
-                                <p>At the moment, I'm working on a wide range of projects from iManage client updates to software integrations.</p
-                                <div id="corner-bl" class="corner"></div>
-                                <div id="corner-br" class="corner"></div>
-                            </div> 
-                        </div>
+                <div id="right-column">
+
+                    <div id="about-shadow">
+
+                        <div id="about-box">
+                            <div id="corner-tl" class="corner" ></div>
+                            <div id="corner-tr" class="corner" ></div>
+                            <h3 class="about-para" id="about-comm"> A bit about me</h3>
+                            <p class="about-para">I'm currently working as an IT DMS Apprentice in the Software Development Team at Fieldfisher LLP, a multinational European Law Firm. </p>
+
+                            <p class="about-para">At the moment, I'm working on a wide range of projects from iManage client updates to software integrations.</p>
+                            
+                            <div id="corner-bl" class="corner"></div>
+                            <div id="corner-br" class="corner"></div>
+
+                        </div> 
+
                     </div>
+
+                </div>
+
             </div>
         
         </div>
@@ -79,7 +89,7 @@
     <section class="s2"> <!--Section Style 2-->
         <div class="main-container">
             <div class="about-wrapper">
-                <div class="about-me">
+                <div id="about" class="about-me">
                         <h4> A little bit more about me</h4>
 
                         <p id="about-para2"> I specialise in creating bespoke applications and integrations for Fieldfisher's legal Document Managment System iManage.</p>
@@ -91,7 +101,7 @@
 
                 <h4>Expertise</h4>
             
-                <p>Software Engineer in training with a focus on Legal DMS Software, A few of my main areas of expertise can be found below</p>
+                <p>Software Engineer in training with a focus on Legal DMS Software, A few of my main areas of expertise can be found below:</p>
                 
                 <div id="skills">
                     <ul>
@@ -118,7 +128,8 @@
             
             <div class="social-links">
                 <img id ="social_img"src="Images/az-900.png">
-                <h3>Social Media Accounts</h3>
+                <p>my AZ-900 certificate </p>           
+                <h3>Social Accounts</h3>
                 <a target="_blank" href="https://linkedin.com/in/benmellor17">LinkedIn @ benmellor17</a> 
                 <br>
                 <a target="_blank" href="https://x.com/benmellor24">Twitter @ benmellor24</a>
@@ -131,53 +142,76 @@
 
     <section class="s3"> <!--Section Style 1-->
         <div class="main-container">
-            <div class="portfolio-wrapper">
+            <div id="projects" class="portfolio-wrapper">
                 <h3 style="text-align: center;"> Projects & Blog</h3>
 
                 <div class="post-wrapper">
 
-                    <div class="post">
-                        <img class="thumbnail" src="Images/temp-img.png">
-                        <div class="post-preview">
-                            <h6 class="post-title"> PLEASE COME BACK LATER</h6>
-                            <p class="post-intro">I promise I'll make something at some point.</p>
+                    <div>
+                        <div class="post">
+                            <img class="thumbnail" src="Images/temp-img.png">
+                            <div class="post-preview">
+                                <h6 class="post-title"> PLEASE COME BACK LATER</h6>
+                                <p class="post-intro">I promise I'll make something at some point.</p>
+                                <a href="post.html">Read More</a>
+                            </div>
                         </div>
                     </div>
 
-
-                    <div class="post">
-                        <img class="thumbnail" src="Images/temp-img2.png">
-                        <div class="post-preview">
-                            <h6 class="post-title"> PLEASE COME BACK LATER</h6>
-                            <p class="post-intro">  What do you think of my artwork?
-                                 :)    </p>
+                    <div>
+                        <div class="post">
+                            <img class="thumbnail" src="Images/temp-img2.png">
+                            <div class="post-preview">
+                                <h6 class="post-title"> PLEASE COME BACK LATER</h6>
+                                <p class="post-intro">  What do you think of my artwork?
+                                    :)    </p>
+                                    <a href="post2.html">Read More</a>
+                            </div>
                         </div>
                     </div>
                     
 
-                    
-                    <div class="post">
-                        <img class="thumbnail" src="Images/temp-img.png">
-                        <div class="post-preview">
-                            <h6 class="post-title"> PLEASE COME BACK LATER</h6>
-                            <p class="post-intro">I'll hopefully make something actually useful.</p>
+                    <div>
+                        <div class="post">
+                            <img class="thumbnail" src="Images/temp-img.png">
+                            <div class="post-preview">
+                                <h6 class="post-title"> PLEASE COME BACK LATER</h6>
+                                <p class="post-intro">I'll hopefully make something actually useful.</p>
+                                <a href="post3.html">Read More</a>
+                            </div>
                         </div>
                     </div>
-                    
                 </div>
 
             </div>
         </div>
     </section>
 
-    <section class="s2"> <!--Section Style 2-->
+    <section class="s4"> <!--Section Style 4-->
         <div class="main-container">
-            <div class="contact-me-wrapper">
+                <h3 style="text-align: center;"> Contact Me</h3>
 
+                <form id="contact-form">
+                    <label>Name</label>
+                    <input class="input-field" type="text" name="name">
+
+                    <label>Subject</label>
+                    <input class="input-field" type="text" name="subject">
+
+
+                    <label>Email</label>
+                    <input class="input-field" type="text" name="email">
+
+                    <label>Message</label>
+                    <textarea class="input-field" type="text" name="message"></textarea>
+
+                    <input type="submit" value="Send" id="submit-btn">
+                </form>
             </div>
         </div>
     </section>
 
+    <script type="text/javascript" src="webscript.js"> </script>
 
 </body>
 </html>
